@@ -220,6 +220,88 @@
       gap:14px;
     }
 
+    /* =========================
+       TRAVEL VIDEO BUTTON + MODAL
+    ========================== */
+    .video-btn{
+      background:rgba(255,255,255,.10);
+      color:#fff;
+      border:2px solid rgba(255,255,255,.75);
+      backdrop-filter:blur(6px);
+    }
+
+    .video-btn:hover{
+      background:#fff;
+      color:#111827;
+      transform:translateY(-2px);
+    }
+
+    .video-modal{
+      position:fixed;
+      inset:0;
+      z-index:99999;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      background:rgba(0,0,0,.86);
+    }
+
+    .video-modal.active{
+      display:flex;
+    }
+
+    .video-modal-content{
+      position:relative;
+      width:min(100%,1000px);
+      max-height:92vh;
+      background:#050505;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 25px 80px rgba(0,0,0,.65);
+    }
+
+    .travel-video{
+      display:block;
+      width:100%;
+      max-height:92vh;
+      background:#000;
+    }
+
+    .video-close{
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index:2;
+      width:42px;
+      height:42px;
+      border:0;
+      border-radius:50%;
+      background:rgba(0,0,0,.72);
+      color:#fff;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    .video-close:hover{
+      background:#fff;
+      color:#111827;
+    }
+
+    body.video-open{
+      overflow:hidden;
+    }
+
+    @media (max-width:600px){
+      .video-modal{
+        padding:10px;
+      }
+
+      .video-modal-content{
+        border-radius:12px;
+      }
+    }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -1041,6 +1123,10 @@
         <a href="tel:+919780008039" class="btn btn-outline">
           Call Now
         </a>
+
+        <button type="button" class="btn video-btn" id="watchTravelVideo">
+          🎬 Watch Our Journey
+        </button>
       </div>
 
     </div>
@@ -1627,6 +1713,27 @@
        JAVASCRIPT
   ========================== -->
 
+  <!-- =========================
+       LAHORIA TRAVELS VIDEO MODAL
+  ========================== -->
+  <div class="video-modal" id="travelVideoModal" aria-hidden="true">
+    <div class="video-modal-content" role="dialog" aria-modal="true" aria-label="Lahoria Travels journey video">
+      <button type="button" class="video-close" id="closeTravelVideo" aria-label="Close video">&times;</button>
+
+      <video
+        class="travel-video"
+        id="travelVideo"
+        controls
+        playsinline
+        preload="metadata"
+        poster="images/scene-1.png"
+      >
+        <source src="videos/lahoria-travels-song.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+
   <script>
 
     /* =========================
@@ -1799,7 +1906,56 @@ Please share the availability and fare details.`;
 
     });
 
+
+    // =========================
+    // TRAVEL VIDEO MODAL
+    // =========================
+    const travelVideoModal = document.getElementById("travelVideoModal");
+    const travelVideo = document.getElementById("travelVideo");
+    const watchTravelVideo = document.getElementById("watchTravelVideo");
+    const closeTravelVideo = document.getElementById("closeTravelVideo");
+
+    function openTravelVideo(){
+      travelVideoModal.classList.add("active");
+      travelVideoModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("video-open");
+
+      travelVideo.currentTime = 0;
+      const playPromise = travelVideo.play();
+      if(playPromise !== undefined){
+        playPromise.catch(() => {
+          // Browser may require the user to press Play if autoplay is restricted.
+        });
+      }
+    }
+
+    function closeTravelVideoModal(){
+      travelVideo.pause();
+      travelVideo.currentTime = 0;
+      travelVideoModal.classList.remove("active");
+      travelVideoModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("video-open");
+    }
+
+    watchTravelVideo.addEventListener("click", openTravelVideo);
+    closeTravelVideo.addEventListener("click", closeTravelVideoModal);
+
+    travelVideoModal.addEventListener("click", (event) => {
+      if(event.target === travelVideoModal){
+        closeTravelVideoModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if(event.key === "Escape" && travelVideoModal.classList.contains("active")){
+        closeTravelVideoModal();
+      }
+    });
+
   </script>
+
+
+
 
 </body>
 </html>
