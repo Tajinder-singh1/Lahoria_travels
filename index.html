@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lahoria Travels - Cab booking, wedding transportation, airport transfers, tourism and self-drive rentals in Punjab." />
+  <meta
+    name="description"
+    content="Lahoria Travels - Cab booking, wedding transportation, airport transfers, tourism and self-drive rentals in Punjab."
+  />
   <title>Lahoria Travels | Cab & Travel Services</title>
 
   <style>
@@ -22,8 +25,16 @@
       --max:1200px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
@@ -31,58 +42,22 @@
       line-height:1.55;
       overflow-x:hidden;
     }
-    a{text-decoration:none;color:inherit}
-    button,input,select,textarea{font:inherit}
-    img{max-width:100%;display:block}
 
-    /* ADS */
-    .ads-section{
-      width:100%;
-      padding:18px 16px 8px;
-      background:#fff;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:14px;
-      overflow:hidden;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
-    .ad-slot{
-      width:100%;
-      max-width:360px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-      margin:0 auto;
+
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
     }
-    .ad-slot.banner-ad{
-      min-height:50px;
-    }
-    .ad-slot.banner-ad iframe{
-      display:block !important;
-      width:100% !important;
-      max-width:320px !important;
-      height:50px !important;
-      border:0 !important;
-    }
-    .ad-slot.native-ad{
-      min-height:90px;
-    }
-    .ad-slot.native-ad > div{
-      width:100%;
-      max-width:360px;
-    }
-    @media (max-width:380px){
-      .ads-section{
-        padding-left:8px;
-        padding-right:8px;
-      }
-      .ad-slot{
-        max-width:100%;
-      }
-      .ad-slot.banner-ad iframe{
-        max-width:320px !important;
-      }
+
+    img{
+      max-width:100%;
+      display:block;
     }
 
     .container{
@@ -90,25 +65,33 @@
       margin:auto;
     }
 
-    /* NAVBAR */
+    /* =========================
+       NAVBAR
+    ========================= */
+
     .navbar{
       position:fixed;
-      top:0;left:0;right:0;
+      top:0;
+      left:0;
+      right:0;
       z-index:1000;
       padding:14px 0;
       transition:.3s ease;
     }
+
     .navbar.scrolled{
       background:rgba(11,18,32,.94);
       backdrop-filter:blur(14px);
       box-shadow:0 8px 30px rgba(0,0,0,.15);
     }
+
     .nav-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:24px;
     }
+
     .logo{
       color:#fff;
       font-size:1.35rem;
@@ -116,7 +99,11 @@
       letter-spacing:-.5px;
       white-space:nowrap;
     }
-    .logo span{color:var(--primary)}
+
+    .logo span{
+      color:var(--primary);
+    }
+
     .nav-links{
       display:flex;
       align-items:center;
@@ -125,8 +112,17 @@
       font-size:.95rem;
       font-weight:600;
     }
-    .nav-links a{opacity:.9;transition:.2s}
-    .nav-links a:hover{color:var(--primary);opacity:1}
+
+    .nav-links a{
+      opacity:.9;
+      transition:.2s;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+      opacity:1;
+    }
+
     .nav-cta{
       background:var(--primary);
       color:#111827!important;
@@ -135,18 +131,23 @@
       font-weight:800!important;
       opacity:1!important;
     }
+
     .menu-btn{
       display:none;
       border:0;
       background:rgba(255,255,255,.12);
       color:#fff;
-      width:44px;height:44px;
+      width:44px;
+      height:44px;
       border-radius:12px;
       cursor:pointer;
       font-size:1.35rem;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero{
       min-height:760px;
       min-height:100svh;
@@ -159,18 +160,31 @@
       color:#fff;
       transition:background-image .7s ease;
     }
+
     .hero::before{
       content:"";
-      position:absolute;inset:0;
+      position:absolute;
+      inset:0;
       z-index:-2;
       background:
-        linear-gradient(90deg,rgba(5,10,20,.86) 0%,rgba(5,10,20,.58) 42%,rgba(5,10,20,.22) 100%),
-        linear-gradient(0deg,rgba(5,10,20,.52),transparent 55%);
+        linear-gradient(
+          90deg,
+          rgba(5,10,20,.86) 0%,
+          rgba(5,10,20,.58) 42%,
+          rgba(5,10,20,.22) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(5,10,20,.52),
+          transparent 55%
+        );
     }
+
     .hero-content{
       padding:130px 0 70px;
       max-width:760px;
     }
+
     .eyebrow{
       display:inline-flex;
       align-items:center;
@@ -184,6 +198,7 @@
       font-size:.82rem;
       margin-bottom:18px;
     }
+
     .hero h1{
       font-size:clamp(2.5rem,6vw,5.25rem);
       line-height:1.02;
@@ -191,18 +206,24 @@
       margin-bottom:22px;
       max-width:850px;
     }
-    .hero h1 span{color:var(--primary)}
+
+    .hero h1 span{
+      color:var(--primary);
+    }
+
     .hero p{
       max-width:650px;
       color:rgba(255,255,255,.84);
       font-size:clamp(1rem,2vw,1.2rem);
       margin-bottom:30px;
     }
+
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
@@ -215,26 +236,42 @@
       font-weight:800;
       transition:.2s ease;
     }
-    .btn-primary{background:var(--primary);color:#111827}
-    .btn-primary:hover{background:#ffc84c;transform:translateY(-2px)}
+
+    .btn-primary{
+      background:var(--primary);
+      color:#111827;
+    }
+
+    .btn-primary:hover{
+      background:#ffc84c;
+      transform:translateY(-2px);
+    }
+
     .btn-outline{
       color:#fff;
       border:1px solid rgba(255,255,255,.4);
       background:rgba(255,255,255,.08);
       backdrop-filter:blur(8px);
     }
-    .btn-outline:hover{background:rgba(255,255,255,.15)}
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,.15);
+    }
 
     .hero-bottom{
       position:absolute;
-      left:0;right:0;bottom:0;
+      left:0;
+      right:0;
+      bottom:0;
       padding-bottom:26px;
     }
+
     .trust-row{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
     }
+
     .trust{
       background:rgba(0,0,0,.28);
       border:1px solid rgba(255,255,255,.15);
@@ -245,12 +282,19 @@
       color:#fff;
     }
 
-    /* SECTIONS */
-    section{padding:88px 0}
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section{
+      padding:88px 0;
+    }
+
     .section-head{
       max-width:700px;
       margin-bottom:42px;
     }
+
     .section-tag{
       color:var(--primary-dark);
       font-weight:900;
@@ -259,6 +303,7 @@
       font-size:.76rem;
       margin-bottom:9px;
     }
+
     .section-title{
       font-size:clamp(2rem,4vw,3.1rem);
       line-height:1.1;
@@ -266,15 +311,26 @@
       color:var(--dark);
       margin-bottom:12px;
     }
-    .section-desc{color:var(--muted);font-size:1.02rem}
 
-    /* SERVICES */
-    .services{background:var(--soft)}
+    .section-desc{
+      color:var(--muted);
+      font-size:1.02rem;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services{
+      background:var(--soft);
+    }
+
     .service-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
+
     .service-card{
       background:#fff;
       border:1px solid var(--border);
@@ -283,25 +339,44 @@
       box-shadow:0 5px 22px rgba(0,0,0,.04);
       transition:.25s ease;
     }
-    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+
+    .service-card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow);
+    }
+
     .service-icon{
-      width:52px;height:52px;
-      display:grid;place-items:center;
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
       background:#fff4d6;
       color:#a86b00;
       border-radius:15px;
       font-size:1.45rem;
       margin-bottom:18px;
     }
-    .service-card h3{font-size:1.1rem;margin-bottom:8px}
-    .service-card p{color:var(--muted);font-size:.92rem}
 
-    /* FLEET */
+    .service-card h3{
+      font-size:1.1rem;
+      margin-bottom:8px;
+    }
+
+    .service-card p{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    /* =========================
+       FLEET
+    ========================= */
+
     .fleet-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:20px;
     }
+
     .fleet-card{
       overflow:hidden;
       border:1px solid var(--border);
@@ -309,28 +384,52 @@
       background:#fff;
       box-shadow:0 5px 22px rgba(0,0,0,.05);
     }
+
     .fleet-photo{
       height:230px;
       background-size:cover;
       background-position:center;
     }
+
     .fleet-card:nth-child(1) .fleet-photo{
-      background-image:url("https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=85");
+      background-image:url(
+        "https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=85"
+      );
     }
+
     .fleet-card:nth-child(2) .fleet-photo{
-      background-image:url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=85");
+      background-image:url(
+        "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=85"
+      );
     }
+
     .fleet-card:nth-child(3) .fleet-photo{
-      background-image:url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=85");
+      background-image:url(
+        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=85"
+      );
     }
-    .fleet-info{padding:23px}
-    .fleet-info h3{font-size:1.3rem;margin-bottom:7px}
-    .fleet-info p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+
+    .fleet-info{
+      padding:23px;
+    }
+
+    .fleet-info h3{
+      font-size:1.3rem;
+      margin-bottom:7px;
+    }
+
+    .fleet-info p{
+      color:var(--muted);
+      font-size:.9rem;
+      margin-bottom:16px;
+    }
+
     .fleet-meta{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
     }
+
     .pill{
       padding:6px 10px;
       background:#f4f6f8;
@@ -340,32 +439,51 @@
       font-weight:700;
     }
 
-    /* BOOKING */
+    /* =========================
+       BOOKING
+    ========================= */
+
     .booking{
       background:linear-gradient(135deg,#0b1220,#18253d);
       color:#fff;
     }
+
     .booking-wrap{
       display:grid;
       grid-template-columns:1fr 1.1fr;
       gap:50px;
       align-items:center;
     }
-    .booking .section-title{color:#fff}
-    .booking .section-desc{color:#b9c2d1}
+
+    .booking .section-title{
+      color:#fff;
+    }
+
+    .booking .section-desc{
+      color:#b9c2d1;
+    }
+
     .booking-points{
       display:grid;
       gap:13px;
       margin-top:25px;
     }
+
     .booking-point{
       display:flex;
       gap:11px;
       align-items:flex-start;
       color:#d9dfeb;
     }
-    .booking-point b{color:#fff}
-    .check{color:var(--primary);font-weight:900}
+
+    .booking-point b{
+      color:#fff;
+    }
+
+    .check{
+      color:var(--primary);
+      font-weight:900;
+    }
 
     .form-card{
       background:#fff;
@@ -374,17 +492,42 @@
       padding:27px;
       box-shadow:0 25px 70px rgba(0,0,0,.25);
     }
-    .form-card h3{font-size:1.4rem;margin-bottom:5px}
-    .form-card > p{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+
+    .form-card h3{
+      font-size:1.4rem;
+      margin-bottom:5px;
+    }
+
+    .form-card > p{
+      color:var(--muted);
+      font-size:.9rem;
+      margin-bottom:20px;
+    }
+
     .form-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
     }
-    .field{display:grid;gap:6px}
-    .field.full{grid-column:1/-1}
-    .field label{font-size:.78rem;font-weight:800;color:#344054}
-    .field input,.field select,.field textarea{
+
+    .field{
+      display:grid;
+      gap:6px;
+    }
+
+    .field.full{
+      grid-column:1/-1;
+    }
+
+    .field label{
+      font-size:.78rem;
+      font-weight:800;
+      color:#344054;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
       width:100%;
       border:1px solid #d9dee7;
       border-radius:11px;
@@ -393,51 +536,100 @@
       color:var(--text);
       background:#fff;
     }
-    .field textarea{min-height:90px;resize:vertical}
-    .field input:focus,.field select:focus,.field textarea:focus{
+
+    .field textarea{
+      min-height:90px;
+      resize:vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
       border-color:var(--primary-dark);
       box-shadow:0 0 0 3px rgba(246,178,26,.14);
     }
-    .form-submit{width:100%;margin-top:17px}
-    .form-note{text-align:center;color:#98a2b3;font-size:.72rem;margin-top:9px}
 
-    /* CONTACT */
+    .form-submit{
+      width:100%;
+      margin-top:17px;
+    }
+
+    .form-note{
+      text-align:center;
+      color:#98a2b3;
+      font-size:.72rem;
+      margin-top:9px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:22px;
     }
+
     .contact-card{
       border:1px solid var(--border);
       border-radius:var(--radius);
       padding:30px;
       background:#fff;
     }
-    .contact-list{display:grid;gap:18px;margin-top:22px}
-    .contact-item{display:flex;gap:14px;align-items:flex-start}
+
+    .contact-list{
+      display:grid;
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .contact-item{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
     .contact-icon{
-      width:44px;height:44px;
+      width:44px;
+      height:44px;
       flex:0 0 44px;
       border-radius:12px;
       background:#fff4d6;
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
     }
-    .contact-item small{display:block;color:#98a2b3;margin-bottom:2px}
-    .contact-item a{font-weight:800}
+
+    .contact-item small{
+      display:block;
+      color:#98a2b3;
+      margin-bottom:2px;
+    }
+
+    .contact-item a{
+      font-weight:800;
+    }
+
     .map-card{
       min-height:330px;
       border-radius:var(--radius);
       overflow:hidden;
       position:relative;
       background:
-        linear-gradient(135deg,rgba(12,35,48,.78),rgba(15,82,71,.5)),
-        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85")
-        center/cover;
+        linear-gradient(
+          135deg,
+          rgba(12,35,48,.78),
+          rgba(15,82,71,.5)
+        ),
+        url(
+          "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85"
+        ) center/cover;
       display:flex;
       align-items:flex-end;
       padding:27px;
       color:#fff;
     }
+
     .map-label{
       background:rgba(0,0,0,.42);
       backdrop-filter:blur(12px);
@@ -446,60 +638,127 @@
       padding:17px;
       width:100%;
     }
-    .map-label small{opacity:.75}
 
-    /* FOOTER */
+    .map-label small{
+      display:block;
+      opacity:.75;
+      margin-top:3px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer{
       background:#070d17;
       color:#9aa5b5;
       padding:25px 0;
     }
+
     .footer-inner{
       display:flex;
       justify-content:space-between;
       gap:20px;
       align-items:center;
     }
-    .footer-logo{color:#fff;font-weight:900}
-    .footer-logo span{color:var(--primary)}
-    .footer-copy{font-size:.8rem}
 
-    /* FLOATING WHATSAPP */
+    .footer-logo{
+      color:#fff;
+      font-weight:900;
+    }
+
+    .footer-logo span{
+      color:var(--primary);
+    }
+
+    .footer-copy{
+      font-size:.8rem;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
     .whatsapp{
       position:fixed;
       right:20px;
       bottom:20px;
       z-index:999;
-      width:56px;height:56px;
+      width:56px;
+      height:56px;
       border-radius:50%;
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
       background:#25D366;
       color:#fff;
       font-size:1.45rem;
       box-shadow:0 10px 30px rgba(0,0,0,.25);
       transition:.2s;
     }
-    .whatsapp:hover{transform:scale(1.08)}
 
-    /* TABLET */
-    @media(max-width:1024px){
-      .container{width:min(calc(100% - 32px),var(--max))}
-      .service-grid{grid-template-columns:repeat(2,1fr)}
-      .fleet-grid{grid-template-columns:repeat(2,1fr)}
-      .fleet-card:last-child{grid-column:1/-1;max-width:520px;width:100%;margin:auto}
-      .booking-wrap{grid-template-columns:1fr;gap:35px}
-      .booking-copy{max-width:720px}
-      .hero{min-height:720px}
+    .whatsapp:hover{
+      transform:scale(1.08);
     }
 
-    /* MOBILE */
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media(max-width:1024px){
+
+      .container{
+        width:min(calc(100% - 32px),var(--max));
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .fleet-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .fleet-card:last-child{
+        grid-column:1/-1;
+        max-width:520px;
+        width:100%;
+        margin:auto;
+      }
+
+      .booking-wrap{
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .booking-copy{
+        max-width:720px;
+      }
+
+      .hero{
+        min-height:720px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media(max-width:760px){
-      .container{width:min(calc(100% - 24px),var(--max))}
-      .navbar{padding:10px 0}
+
+      .container{
+        width:min(calc(100% - 24px),var(--max));
+      }
+
+      .navbar{
+        padding:10px 0;
+      }
+
       .nav-links{
         display:none;
         position:absolute;
-        top:68px;left:12px;right:12px;
+        top:68px;
+        left:12px;
+        right:12px;
         padding:14px;
         background:rgba(11,18,32,.98);
         border:1px solid rgba(255,255,255,.1);
@@ -509,61 +768,176 @@
         gap:3px;
         box-shadow:0 18px 45px rgba(0,0,0,.25);
       }
-      .nav-links.open{display:flex}
-      .nav-links a{padding:13px 14px;border-radius:10px}
-      .nav-links a:hover{background:rgba(255,255,255,.06)}
-      .nav-cta{text-align:center}
-      .menu-btn{display:block}
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .nav-links a{
+        padding:13px 14px;
+        border-radius:10px;
+      }
+
+      .nav-links a:hover{
+        background:rgba(255,255,255,.06);
+      }
+
+      .nav-cta{
+        text-align:center;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
       .hero{
         min-height:690px;
         background-position:58% center;
       }
+
       .hero::before{
         background:
-          linear-gradient(180deg,rgba(5,10,20,.72) 0%,rgba(5,10,20,.48) 42%,rgba(5,10,20,.82) 100%);
+          linear-gradient(
+            180deg,
+            rgba(5,10,20,.72) 0%,
+            rgba(5,10,20,.48) 42%,
+            rgba(5,10,20,.82) 100%
+          );
       }
-      .hero-content{padding:125px 0 105px}
+
+      .hero-content{
+        padding:125px 0 105px;
+      }
+
       .hero h1{
         font-size:clamp(2.45rem,13vw,4rem);
         letter-spacing:-2px;
       }
-      .hero p{font-size:.98rem}
-      .hero-actions{display:grid;grid-template-columns:1fr}
-      .btn{width:100%}
-      .hero-bottom{padding-bottom:17px}
-      .trust-row{display:grid;grid-template-columns:1fr 1fr}
-      .trust{font-size:.73rem;text-align:center;padding:8px 7px}
-      section{padding:65px 0}
-      .section-head{margin-bottom:30px}
-      .service-grid,.fleet-grid,.contact-grid{grid-template-columns:1fr}
-      .fleet-card:last-child{grid-column:auto;max-width:none}
-      .fleet-photo{height:210px}
-      .form-grid{grid-template-columns:1fr}
-      .field.full{grid-column:auto}
-      .form-card{padding:20px}
-      .map-card{min-height:270px}
-      .footer-inner{flex-direction:column;text-align:center}
+
+      .hero p{
+        font-size:.98rem;
+      }
+
+      .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-bottom{
+        padding-bottom:17px;
+      }
+
+      .trust-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+      }
+
+      .trust{
+        font-size:.73rem;
+        text-align:center;
+        padding:8px 7px;
+      }
+
+      section{
+        padding:65px 0;
+      }
+
+      .section-head{
+        margin-bottom:30px;
+      }
+
+      .service-grid,
+      .fleet-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .fleet-card:last-child{
+        grid-column:auto;
+        max-width:none;
+      }
+
+      .fleet-photo{
+        height:210px;
+      }
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .field.full{
+        grid-column:auto;
+      }
+
+      .form-card{
+        padding:20px;
+      }
+
+      .map-card{
+        min-height:270px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        text-align:center;
+      }
     }
 
-    /* SMALL PHONES */
+    /* =========================
+       SMALL PHONES
+    ========================= */
+
     @media(max-width:380px){
-      .logo{font-size:1.12rem}
-      .hero h1{font-size:2.35rem}
-      .trust-row{grid-template-columns:1fr}
-      .form-card{padding:17px}
+
+      .logo{
+        font-size:1.12rem;
+      }
+
+      .hero h1{
+        font-size:2.35rem;
+      }
+
+      .trust-row{
+        grid-template-columns:1fr;
+      }
+
+      .form-card{
+        padding:17px;
+      }
     }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
 
     @media(prefers-reduced-motion:reduce){
-      *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+
+      *,
+      *::before,
+      *::after{
+        scroll-behavior:auto!important;
+        transition:none!important;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a class="logo" href="#home">Lahoria<span>_travels</span></a>
+
+      <a class="logo" href="#home">
+        Lahoria<span>_travels</span>
+      </a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#home">Home</a>
@@ -571,288 +945,824 @@
         <a href="#fleet">Our Fleet</a>
         <a href="#booking">Book Now</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="tel:+919780008039">Call Nirmal</a>
+
+        <a
+          class="nav-cta"
+          href="tel:+919780008039"
+        >
+          Call Nirmal
+        </a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
     </div>
   </header>
 
+
   <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero" id="home">
+
       <div class="container hero-content">
-        <div class="eyebrow">✦ TRAVEL • COMFORT • TRUST</div>
-        <h1>Go farther.<br><span>Travel better.</span></h1>
+
+        <div class="eyebrow">
+          ✦ TRAVEL • COMFORT • TRUST
+        </div>
+
+        <h1>
+          Go farther.<br />
+          <span>Travel better.</span>
+        </h1>
+
         <p>
           Comfortable cab and travel services for weddings, airport transfers,
           tourism, outstation journeys and self-drive rentals across Punjab and beyond.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#booking">🚕 Book a Vehicle</a>
-          <a class="btn btn-outline" href="https://wa.me/919780008039?text=Hello%20Lahoria%20Travels%2C%20I%20want%20to%20make%20a%20booking." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+
+          <a
+            class="btn btn-primary"
+            href="#booking"
+          >
+            🚕 Book a Vehicle
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/919780008039?text=Hello%20Lahoria%20Travels%2C%20I%20want%20to%20make%20a%20booking."
+            target="_blank"
+            rel="noopener"
+          >
+            💬 WhatsApp Us
+          </a>
+
         </div>
+
       </div>
 
       <div class="hero-bottom">
+
         <div class="container trust-row">
-          <div class="trust">✓ Wedding Travel</div>
-          <div class="trust">✓ Airport Drops</div>
-          <div class="trust">✓ Tourism Trips</div>
-          <div class="trust">✓ Self-Drive Rental</div>
+
+          <div class="trust">
+            ✓ Wedding Travel
+          </div>
+
+          <div class="trust">
+            ✓ Airport Drops
+          </div>
+
+          <div class="trust">
+            ✓ Tourism Trips
+          </div>
+
+          <div class="trust">
+            ✓ Self-Drive Rental
+          </div>
+
         </div>
-      </div>
-    </section>
 
-
-      <!-- Native Ad -->
-      <div class="ad-slot native-ad">
-        <script async="async" data-cfasync="false" src="https://pl31616067.profitableratecpmnetwork.com/5ceb24a8a547ee8e6c4c5862077fb6a9/invoke.js"></script>
-        <div id="container-5ceb24a8a547ee8e6c4c5862077fb6a9"></div>
       </div>
 
     </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
     <section class="services" id="services">
+
       <div class="container">
+
         <div class="section-head">
-          <div class="section-tag">Our Services</div>
-          <h2 class="section-title">Travel made simple.</h2>
+
+          <div class="section-tag">
+            Our Services
+          </div>
+
+          <h2 class="section-title">
+            Travel made simple.
+          </h2>
+
           <p class="section-desc">
-            Tell us where you need to go and what you need. We will help arrange the right vehicle for your trip.
+            Tell us where you need to go and what you need.
+            We will help arrange the right vehicle for your trip.
           </p>
+
         </div>
+
 
         <div class="service-grid">
-          <article class="service-card">
-            <div class="service-icon">💍</div>
-            <h3>Wedding Travel</h3>
-            <p>Comfortable transportation for baraat, guests, family and wedding events.</p>
-          </article>
 
           <article class="service-card">
-            <div class="service-icon">✈️</div>
-            <h3>Airport Transfers</h3>
-            <p>Pickup and drop services for airports with convenient pre-booking.</p>
+
+            <div class="service-icon">
+              💍
+            </div>
+
+            <h3>
+              Wedding Travel
+            </h3>
+
+            <p>
+              Comfortable transportation for baraat, guests, family and wedding events.
+            </p>
+
           </article>
 
-          <article class="service-card">
-            <div class="service-icon">🏔️</div>
-            <h3>Tourism & Outstation</h3>
-            <p>Plan sightseeing, family trips and long-distance journeys with ease.</p>
-          </article>
 
           <article class="service-card">
-            <div class="service-icon">🚘</div>
-            <h3>Self-Drive Rental</h3>
-            <p>Ask about available vehicles, rental terms and self-drive options.</p>
+
+            <div class="service-icon">
+              ✈️
+            </div>
+
+            <h3>
+              Airport Transfers
+            </h3>
+
+            <p>
+              Pickup and drop services for airports with convenient pre-booking.
+            </p>
+
           </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🏔️
+            </div>
+
+            <h3>
+              Tourism & Outstation
+            </h3>
+
+            <p>
+              Plan sightseeing, family trips and long-distance journeys with ease.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🚘
+            </div>
+
+            <h3>
+              Self-Drive Rental
+            </h3>
+
+            <p>
+              Ask about available vehicles, rental terms and self-drive options.
+            </p>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         FLEET
+    ========================= -->
 
     <section id="fleet">
+
       <div class="container">
+
         <div class="section-head">
-          <div class="section-tag">Our Fleet</div>
-          <h2 class="section-title">Choose your ride.</h2>
+
+          <div class="section-tag">
+            Our Fleet
+          </div>
+
+          <h2 class="section-title">
+            Choose your ride.
+          </h2>
+
           <p class="section-desc">
-            Select a vehicle while booking. Availability and rental details can be confirmed with Nirmal Singh.
+            Select a vehicle while booking. Availability and rental details
+            can be confirmed with Nirmal Singh.
           </p>
+
         </div>
+
 
         <div class="fleet-grid">
-          <article class="fleet-card">
-            <div class="fleet-photo" role="img" aria-label="Car on a scenic road"></div>
-            <div class="fleet-info">
-              <h3>Swift Dzire</h3>
-              <p>Compact, comfortable and suitable for airport transfers, local travel and small groups.</p>
-              <div class="fleet-meta">
-                <span class="pill">Comfort</span>
-                <span class="pill">City Trips</span>
-                <span class="pill">Airport</span>
-              </div>
-            </div>
-          </article>
 
           <article class="fleet-card">
-            <div class="fleet-photo" role="img" aria-label="Premium SUV for travel"></div>
+
+            <div
+              class="fleet-photo"
+              role="img"
+              aria-label="Car on a scenic road"
+            ></div>
+
             <div class="fleet-info">
-              <h3>Innova Crysta</h3>
-              <p>Spacious option for families, weddings, tourism and longer outstation journeys.</p>
+
+              <h3>
+                Swift Dzire
+              </h3>
+
+              <p>
+                Compact, comfortable and suitable for airport transfers,
+                local travel and small groups.
+              </p>
+
               <div class="fleet-meta">
-                <span class="pill">Family</span>
-                <span class="pill">Tourism</span>
-                <span class="pill">Outstation</span>
+
+                <span class="pill">
+                  Comfort
+                </span>
+
+                <span class="pill">
+                  City Trips
+                </span>
+
+                <span class="pill">
+                  Airport
+                </span>
+
               </div>
+
             </div>
+
           </article>
 
+
           <article class="fleet-card">
-            <div class="fleet-photo" role="img" aria-label="Large vehicle for group travel"></div>
+
+            <div
+              class="fleet-photo"
+              role="img"
+              aria-label="Premium SUV for travel"
+            ></div>
+
             <div class="fleet-info">
-              <h3>Tempo Traveller</h3>
-              <p>A practical choice for groups, tours, wedding guests and multi-day trips.</p>
+
+              <h3>
+                Innova Crysta
+              </h3>
+
+              <p>
+                Spacious option for families, weddings, tourism and
+                longer outstation journeys.
+              </p>
+
               <div class="fleet-meta">
-                <span class="pill">Groups</span>
-                <span class="pill">Weddings</span>
-                <span class="pill">Tours</span>
+
+                <span class="pill">
+                  Family
+                </span>
+
+                <span class="pill">
+                  Tourism
+                </span>
+
+                <span class="pill">
+                  Outstation
+                </span>
+
               </div>
+
             </div>
+
           </article>
+
+
+          <article class="fleet-card">
+
+            <div
+              class="fleet-photo"
+              role="img"
+              aria-label="Large vehicle for group travel"
+            ></div>
+
+            <div class="fleet-info">
+
+              <h3>
+                Tempo Traveller
+              </h3>
+
+              <p>
+                A practical choice for groups, tours, wedding guests
+                and multi-day trips.
+              </p>
+
+              <div class="fleet-meta">
+
+                <span class="pill">
+                  Groups
+                </span>
+
+                <span class="pill">
+                  Weddings
+                </span>
+
+                <span class="pill">
+                  Tours
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         BOOKING
+    ========================= -->
 
     <section class="booking" id="booking">
+
       <div class="container booking-wrap">
+
         <div class="booking-copy">
-          <div class="section-tag">Easy Booking</div>
-          <h2 class="section-title">Tell us about your trip.</h2>
+
+          <div class="section-tag">
+            Easy Booking
+          </div>
+
+          <h2 class="section-title">
+            Tell us about your trip.
+          </h2>
+
           <p class="section-desc">
-            Submit your details and the booking request will open in WhatsApp so you can confirm availability directly.
+            Submit your details and the booking request will open in WhatsApp
+            so you can confirm availability directly.
           </p>
 
+
           <div class="booking-points">
-            <div class="booking-point"><span class="check">✓</span><span><b>Flexible travel:</b> local, airport, tourism and outstation requests.</span></div>
-            <div class="booking-point"><span class="check">✓</span><span><b>Multiple vehicles:</b> Swift Dzire, Innova Crysta and Tempo Traveller.</span></div>
-            <div class="booking-point"><span class="check">✓</span><span><b>Direct contact:</b> speak with Nirmal Singh for availability and details.</span></div>
+
+            <div class="booking-point">
+              <span class="check">✓</span>
+
+              <span>
+                <b>Flexible travel:</b>
+                local, airport, tourism and outstation requests.
+              </span>
+            </div>
+
+
+            <div class="booking-point">
+              <span class="check">✓</span>
+
+              <span>
+                <b>Multiple vehicles:</b>
+                Swift Dzire, Innova Crysta and Tempo Traveller.
+              </span>
+            </div>
+
+
+            <div class="booking-point">
+              <span class="check">✓</span>
+
+              <span>
+                <b>Direct contact:</b>
+                speak with Nirmal Singh for availability and details.
+              </span>
+            </div>
+
           </div>
+
         </div>
+
 
         <div class="form-card">
-          <h3>Request a Booking</h3>
-          <p>Fill in the basic trip details.</p>
+
+          <h3>
+            Request a Booking
+          </h3>
+
+          <p>
+            Fill in the basic trip details.
+          </p>
+
 
           <form id="bookingForm">
+
             <div class="form-grid">
-              <div class="field">
-                <label for="name">Your Name</label>
-                <input id="name" name="name" type="text" placeholder="Full name" required />
-              </div>
 
               <div class="field">
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" type="tel" placeholder="10-digit number" required />
+
+                <label for="name">
+                  Your Name
+                </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Full name"
+                  required
+                />
+
               </div>
 
+
               <div class="field">
-                <label for="vehicle">Vehicle</label>
-                <select id="vehicle" name="vehicle" required>
-                  <option value="">Select vehicle</option>
-                  <option>Swift Dzire</option>
-                  <option>Innova Crysta</option>
-                  <option>Tempo Traveller</option>
-                  <option>Self-Drive Rental</option>
+
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="10-digit number"
+                  required
+                />
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="vehicle">
+                  Vehicle
+                </label>
+
+                <select
+                  id="vehicle"
+                  name="vehicle"
+                  required
+                >
+
+                  <option value="">
+                    Select vehicle
+                  </option>
+
+                  <option>
+                    Swift Dzire
+                  </option>
+
+                  <option>
+                    Innova Crysta
+                  </option>
+
+                  <option>
+                    Tempo Traveller
+                  </option>
+
+                  <option>
+                    Self-Drive Rental
+                  </option>
+
                 </select>
+
               </div>
 
+
               <div class="field">
-                <label for="service">Service</label>
-                <select id="service" name="service" required>
-                  <option value="">Select service</option>
-                  <option>Wedding Travel</option>
-                  <option>Airport Pickup / Drop</option>
-                  <option>Tourism / Outstation</option>
-                  <option>Self-Drive Rental</option>
-                  <option>Other</option>
+
+                <label for="service">
+                  Service
+                </label>
+
+                <select
+                  id="service"
+                  name="service"
+                  required
+                >
+
+                  <option value="">
+                    Select service
+                  </option>
+
+                  <option>
+                    Wedding Travel
+                  </option>
+
+                  <option>
+                    Airport Pickup / Drop
+                  </option>
+
+                  <option>
+                    Tourism / Outstation
+                  </option>
+
+                  <option>
+                    Self-Drive Rental
+                  </option>
+
+                  <option>
+                    Other
+                  </option>
+
                 </select>
+
               </div>
 
-              <div class="field">
-                <label for="date">Travel Date</label>
-                <input id="date" name="date" type="date" required />
-              </div>
 
               <div class="field">
-                <label for="passengers">Passengers</label>
-                <input id="passengers" name="passengers" type="number" min="1" placeholder="Number of people" required />
+
+                <label for="date">
+                  Travel Date
+                </label>
+
+                <input
+                  id="date"
+                  name="date"
+                  type="date"
+                  required
+                />
+
               </div>
+
+
+              <div class="field">
+
+                <label for="passengers">
+                  Passengers
+                </label>
+
+                <input
+                  id="passengers"
+                  name="passengers"
+                  type="number"
+                  min="1"
+                  placeholder="Number of people"
+                  required
+                />
+
+              </div>
+
 
               <div class="field full">
-                <label for="route">Pickup / Destination</label>
-                <input id="route" name="route" type="text" placeholder="Example: Moga → Chandigarh Airport" required />
+
+                <label for="route">
+                  Pickup / Destination
+                </label>
+
+                <input
+                  id="route"
+                  name="route"
+                  type="text"
+                  placeholder="Example: Moga → Chandigarh Airport"
+                  required
+                />
+
               </div>
 
+
               <div class="field full">
-                <label for="message">Additional Details</label>
-                <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
+
+                <label for="message">
+                  Additional Details
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Anything else we should know?"
+                ></textarea>
+
               </div>
+
             </div>
 
-            <button class="btn btn-primary form-submit" type="submit">💬 Send Booking on WhatsApp</button>
-            <div class="form-note">Your request will be sent to Lahoria Travels via WhatsApp.</div>
+
+            <button
+              class="btn btn-primary form-submit"
+              type="submit"
+            >
+              💬 Send Booking on WhatsApp
+            </button>
+
+            <div class="form-note">
+              Your request will be sent to Lahoria Travels via WhatsApp.
+            </div>
+
           </form>
+
         </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact">
+
       <div class="container">
+
         <div class="section-head">
-          <div class="section-tag">Contact Us</div>
-          <h2 class="section-title">Let's plan your journey.</h2>
-          <p class="section-desc">Contact Lahoria Travels for availability, vehicle details and booking assistance.</p>
+
+          <div class="section-tag">
+            Contact Us
+          </div>
+
+          <h2 class="section-title">
+            Let's plan your journey.
+          </h2>
+
+          <p class="section-desc">
+            Contact Lahoria Travels for availability, vehicle details
+            and booking assistance.
+          </p>
+
         </div>
+
 
         <div class="contact-grid">
+
           <div class="contact-card">
-            <h3>Lahoria_travels</h3>
+
+            <h3>
+              Lahoria_travels
+            </h3>
+
+
             <div class="contact-list">
-              <div class="contact-item">
-                <div class="contact-icon">👤</div>
-                <div>
-                  <small>Contact Person</small>
-                  <strong>Nirmal Singh</strong>
-                </div>
-              </div>
 
               <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                  <small>Call</small>
-                  <a href="tel:+919780008039">9780008039</a><br />
-                  <a href="tel:+919465678569">9465678569</a>
+
+                <div class="contact-icon">
+                  👤
                 </div>
+
+                <div>
+
+                  <small>
+                    Contact Person
+                  </small>
+
+                  <strong>
+                    Nirmal Singh
+                  </strong>
+
+                </div>
+
               </div>
 
+
               <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <small>Address</small>
-                  <strong>Kot-Ise-Khan, Moga, Punjab</strong>
+
+                <div class="contact-icon">
+                  📞
                 </div>
+
+                <div>
+
+                  <small>
+                    Call
+                  </small>
+
+                  <a href="tel:+919780008039">
+                    9780008039
+                  </a>
+
+                  <br />
+
+                  <a href="tel:+919465678569">
+                    9465678569
+                  </a>
+
+                </div>
+
               </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">
+                  📍
+                </div>
+
+                <div>
+
+                  <small>
+                    Address
+                  </small>
+
+                  <strong>
+                    Kot-Ise-Khan, Moga, Punjab
+                  </strong>
+
+                </div>
+
+              </div>
+
 
               <div>
-                <a class="btn btn-primary" href="https://wa.me/919780008039?text=Hello%20Nirmal%20Singh%2C%20I%20want%20to%20book%20a%20vehicle." target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+
+                <a
+                  class="btn btn-primary"
+                  href="https://wa.me/919780008039?text=Hello%20Nirmal%20Singh%2C%20I%20want%20to%20book%20a%20vehicle."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  💬 Chat on WhatsApp
+                </a>
+
               </div>
+
             </div>
+
           </div>
+
 
           <div class="map-card">
+
             <div class="map-label">
-              <strong>Serving Kot-Ise-Khan, Moga & travel destinations</strong>
-              <small>Contact us to discuss your route and vehicle requirement.</small>
+
+              <strong>
+                Serving Kot-Ise-Khan, Moga & travel destinations
+              </strong>
+
+              <small>
+                Contact us to discuss your route and vehicle requirement.
+              </small>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     <div class="container footer-inner">
-      <div class="footer-logo">Lahoria<span>_travels</span></div>
-      <div class="footer-copy">© <span id="year"></span> Lahoria Travels. All rights reserved. | copyright@Tajinder Singh</div>
+
+      <div class="footer-logo">
+        Lahoria<span>_travels</span>
+      </div>
+
+      <div class="footer-copy">
+        © <span id="year"></span> Lahoria Travels.
+        All rights reserved. | copyright@Tajinder Singh
+      </div>
+
     </div>
+
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/919780008039?text=Hello%20Lahoria%20Travels%2C%20I%20want%20to%20make%20a%20booking." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◉</a>
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/919780008039?text=Hello%20Lahoria%20Travels%2C%20I%20want%20to%20make%20a%20booking."
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    ◉
+  </a>
+
 
   <script>
-    // Random scenic travel backgrounds.
-    // A different image is selected each time the page loads.
+
+    /* =========================
+       HERO BACKGROUND
+    ========================= */
+
     const heroImages = [
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2200&q=90",
       "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90",
@@ -861,50 +1771,126 @@
     ];
 
     const hero = document.querySelector(".hero");
-    const randomHero = heroImages[Math.floor(Math.random() * heroImages.length)];
-    hero.style.backgroundImage = `url("${randomHero}")`;
 
-    // Mobile navigation.
+    const randomHero =
+      heroImages[Math.floor(Math.random() * heroImages.length)];
+
+    hero.style.backgroundImage =
+      `url("${randomHero}")`;
+
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
 
     menuBtn.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", open);
-      menuBtn.textContent = open ? "✕" : "☰";
+
+      const open =
+        navLinks.classList.toggle("open");
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        open
+      );
+
+      menuBtn.textContent =
+        open ? "✕" : "☰";
+
     });
 
-    document.querySelectorAll("#navLinks a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.textContent = "☰";
+
+    document
+      .querySelectorAll("#navLinks a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuBtn.textContent = "☰";
+
+        });
+
       });
-    });
 
-    // Navbar appearance on scroll.
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      navbar.classList.toggle("scrolled", window.scrollY > 20);
-    }, { passive: true });
 
-    // Set current year.
-    document.getElementById("year").textContent = new Date().getFullYear();
+    /* =========================
+       NAVBAR ON SCROLL
+    ========================= */
 
-    // Prevent selecting a past travel date.
-    const dateInput = document.getElementById("date");
+    const navbar =
+      document.getElementById("navbar");
+
+    window.addEventListener(
+      "scroll",
+      () => {
+
+        navbar.classList.toggle(
+          "scrolled",
+          window.scrollY > 20
+        );
+
+      },
+      { passive:true }
+    );
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       PREVENT PAST TRAVEL DATE
+    ========================= */
+
+    const dateInput =
+      document.getElementById("date");
+
     const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, "0");
-    const dd = String(today.getDate()).padStart(2, "0");
-    dateInput.min = `${yyyy}-${mm}-${dd}`;
 
-    // Booking form -> WhatsApp.
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+    const yyyy =
+      today.getFullYear();
 
-      const data = new FormData(this);
-      const message =
+    const mm =
+      String(today.getMonth() + 1)
+        .padStart(2, "0");
+
+    const dd =
+      String(today.getDate())
+        .padStart(2, "0");
+
+    dateInput.min =
+      `${yyyy}-${mm}-${dd}`;
+
+
+    /* =========================
+       BOOKING FORM → WHATSAPP
+    ========================= */
+
+    document
+      .getElementById("bookingForm")
+      .addEventListener(
+        "submit",
+        function(e){
+
+          e.preventDefault();
+
+          const data =
+            new FormData(this);
+
+          const message =
 `Hello Lahoria Travels,
 
 I want to make a booking.
@@ -920,11 +1906,16 @@ Additional Details: ${data.get("message") || "None"}
 
 Please confirm availability and details.`;
 
-      window.open(
-        "https://wa.me/919780008039?text=" + encodeURIComponent(message),
-        "_blank"
+          window.open(
+            "https://wa.me/919780008039?text=" +
+            encodeURIComponent(message),
+            "_blank"
+          );
+
+        }
       );
-    });
+
   </script>
+
 </body>
 </html>
